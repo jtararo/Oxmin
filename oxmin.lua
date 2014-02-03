@@ -506,7 +506,7 @@ function PLUGIN:cmdTeleport( netuser, args )
 		
 		
 		-- Teleport targetuser to targetuser2
-		userCommanding = netuser.DisplayName	-- Admin executing the command
+		userCommanding = util.QuoteSafe( netuser.DisplayName )	-- Admin executing the command
 		userDestination = util.QuoteSafe( targetuser2.displayName )		-- The target person to send to
 		userSource = util.QuoteSafe( targetuser.displayName )	-- Person being Teleported (Sent)
 		
